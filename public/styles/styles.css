@@ -1,3 +1,26 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.jumbotron {
+  background: none
+}
+
+.form {
+  background-color: white;
+  padding: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+
+}
+
+.title {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+/* .footer {
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+} */
