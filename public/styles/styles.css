@@ -2,6 +2,9 @@
   line-height: 2.5;
 }
 
+.signInBox {
+  padding: 50px;
+}
 .buttonstyle {
   font-family: "Amatic SC", cursive;
   font-size: 80px;
