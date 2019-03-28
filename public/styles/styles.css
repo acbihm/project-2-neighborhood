@@ -2,6 +2,22 @@
   line-height: 2.5;
 }
 
+.buttonstyle {
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+}
+
+.font1 {
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 100px;
+}
+.leads {
+  font-size: 30px;
+  font-family: Caveat, cursive;
+  text-align: center;
+}
+
 .jumbotron {
   background: none
 }
