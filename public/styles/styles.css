@@ -13,36 +13,36 @@
   font-size: 100px;
 }
 .button {
-  border-radius: 12px;
+  border-radius: 4px;
   border: none;
   padding: 7px;
   background-color: #28a745;
   font-size: 23px;
   font-family: "Caveat", cursive;
   color: white;
-  
+  width: 100%;
 }
 
 .button2 {
-  border-radius: 12px;
+  border-radius: 4px;
   border: none;
   padding: 7px;
   background-color:#007bff;
   font-size: 23px;
   font-family: "Caveat", cursive;
   color: white;
-  
+  width: 100%;
 }
 
 .button3 {
-  border-radius: 12px;
+  border-radius: 4px;
   border: none;
   padding: 7px;
   background-color: #d39e00;
   font-size: 23px;
   font-family: "Caveat", cursive;
   color: white;
-  
+  width: 100%;
 }
 
 .button4 {
