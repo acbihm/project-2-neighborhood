@@ -1,17 +1,18 @@
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("bill", "75165", "resident", true, 1);
+USE grass_is_greener_db;
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("bill", "75165", "resident", true, 1, DEFAULT, DEFAULT);
 
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("john", "75165", "resident", true, 1);
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("john", "75165", "resident", true, 1, DEFAULT, DEFAULT);
 
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("adam", "75165", "resident", false, 1);
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("adam", "75165", "resident", false, 1, DEFAULT, DEFAULT);
 
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("jason", "75165", "visitor", false, 1);
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("jason", "75165", "visitor", false, 1, DEFAULT, DEFAULT);
 
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("kyle", "75165", "visitor", false, 1);
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("kyle", "75165", "visitor", false, 1, DEFAULT, DEFAULT);
 
-INSERT INTO answer(user_name, zip_code, person_type, answer, questionid)
-VALUES ("perry", "75165", "visitor", false, 1);
+INSERT INTO answers(user_name, zip_code, person_type, answer, questionid, createdAt, updatedAt)
+VALUES ("perry", "75165", "visitor", false, 1, DEFAULT, DEFAULT);
