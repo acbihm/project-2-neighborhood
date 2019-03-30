@@ -12,22 +12,45 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="main.js"></script>
 </head>
 
 
 <body>
- 
-    <div class="card-img-overlay">
 
-        <div class="row">
+    <div class="card-img-overlay">
+        <form class="form-inline">
+            <div>
+                <input id="submit-results" type="submit" value="Submit">
+            </div>
+
+            <div id="tags">
+                <div>
+                    <label for="zipcode">Zip Code</label><br>
+                    <input name="zipcode" id="zipcode" placeholder="Zip code here"><br><br>
+                </div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="resident" autocomplete="off" checked> Resident
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="visitor" autocomplete="off"> Visitor
+                    </label>
+
+                </div>
+                <br><br>
+                <label for="tag-input">All Tags</label>
+            </div>
+        </form>
+        
+        <!-- <div class="row">
             <div class="container align-center text-center">
                 <h1 class="font1">Activities</h1>
                 <div class="row mt-5">
@@ -177,9 +200,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <a class="button4 btn-block" href="home.html">Submit</a>
+        <a class="button4 btn-block" href="home.html">Submit</a>
 
 
 
