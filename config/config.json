@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "yourRootPassword",
+    "password": "password",
     "database": "grass_is_greener_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "yourRootPassword",
+    "password": "password",
     "database": "grass_is_greener_db",
     "host": "localhost",
     "dialect": "mysql",
