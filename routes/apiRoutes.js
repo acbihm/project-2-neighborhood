@@ -17,14 +17,14 @@ module.exports = function (app) {
   // });
 
   app.get('/api/answer', function (req, res) {
-    db.answers.findAll({}).then(function (dbAnswer) {
+    db.answers.findAll({}).then(function(dbAnswer) {
       res.json(dbAnswer);
     });
   });
 
-  app.get("/api/answer/:user_name", function (req, res) {
+  app.get("/api/answer/:user_name", function(req, res) {
     if (req.params.user_name) {
-          console.log(db.answers[1]);
+      console.log(db.answers[1]);
       db.answers.findOne({
         where: {
           user_name: req.params.user_name
@@ -35,24 +35,38 @@ module.exports = function (app) {
     }
   });
 
+
+  app.post("/api/answer", function (req, res) {
+    console.log(req.body);
+    db.answers.create({
+      user_name: req.body.user_name,
+      zip_code: req.body.zip_code,
+    })
+      .then(function (dbAnswer) {
+        res.json(dbAnswer);
+      });
+  });
+
+
   // app.post("/api/answer", function (req, res) {
   //   var ans = req.body;
-  //   db.Answer.create({
-  //     // id: 
-  //     user_name: ans.user_name,
-  //     zip_code: ans.zip_code,
-  //     answer: ans.answer,
-  //     questionId: ans.questionId
-  //   }).then(function (dbAnswer) {
-  //     res.json(dbAnswer);
-  //   });
+  //   res.json(ans);
+  //   // db.answers.create({
+  //   //   user_name: ans.user_name,
+  //   //   zip_code: ans.zip_code,
+  //   //   answer: ans.answer,
+  //   //   questionId: ans.questionId
+  //   // }).then(function (dbAnswer) {
+  //   //   res.json(dbAnswer);
+  //   // });
   //   // res.status(204).end();
   // });
 
   // app.post('/api/answer', function (req, res) {
-  //   db.Answer.create(req.body).then(function (dbAnswer) {
+  //   db.answers.create(req.body).then(function (dbAnswer) {
   //     res.json(dbAnswer);
   //   });
+  //   // console.log(req.body);
   // });
 
   // Delete an example by id
