@@ -22,6 +22,13 @@ module.exports = function(app) {
     });
   });
 
+
+  app.get("/api/all", function (req, res) {
+    db.answers.findAll({}).then(function(dbAnswer) {
+      res.json(dbAnswer);
+    });
+  });
+
   app.get("/api/answer/:user_name", function(req, res) {
     if (req.params.user_name) {
       console.log(db.answers[1]);
