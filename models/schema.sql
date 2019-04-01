@@ -19,6 +19,7 @@ answer BOOLEAN DEFAULT FALSE,
 questionID INTEGER(11),
 createdAt DATETIME, 
 updatedAt DATETIME,
-FOREIGN KEY (id) REFERENCES question (id)
+PRIMARY KEY (id)
+FOREIGN KEY (questionID) REFERENCES question (id)
 -- FOREIGN KEY (id) REFERENCES users (user_name)
 );
