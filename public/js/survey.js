@@ -58,7 +58,7 @@ $(document).ready(function () {
       b.attr("data-toggle", "buttons");
       b.attr("data-name", arrayToUse[i]);
       // b.attr("data-cat", "social"),
-      b.html("<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+      b.html(`<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(b);
     }
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
       c.attr("data-name", arrayToUse[i]);
       // c.attr("data-cat", "aesthetics"),
       c.html(
-        "<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+        `<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(c);
     }
 
@@ -83,7 +83,7 @@ $(document).ready(function () {
       d.attr("data-toggle", "buttons");
       d.attr("data-name", arrayToUse[i]);
       // d.attr("data-cat", "activities"),
-      d.html("<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+      d.html(`<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(d);
     }
   }

@@ -38,76 +38,76 @@ INSERT INTO question(tag, category)
 VALUES ("scenic_tours", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("live_music", "aesthetics");
+VALUES ("historical_markers", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("great_shopping", "aesthetics");
+VALUES ("lots_of_wildlife", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES (" dog_walking_clubs", "aesthetics");
+VALUES ("old_houses", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("many_young_people", "aesthetics");
+VALUES ("outdoor_murals", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("too_crowded", "aesthetics");
+VALUES ("sculpture_gardens", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("feels_safe", "aesthetics");
+VALUES ("modern_buildings", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("feels_dangerous", "aesthetics");
+VALUES ("beautiful_sunsets", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("kind_of_empty", "aesthetics");
+VALUES ("distinct_skyline", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("friendly_people", "aesthetics");
+VALUES ("many_wildflowers", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("too_many_hipsters", "aesthetics");
+VALUES ("bland", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("snobby_people", "aesthetics");
+VALUES ("needs_upkeep", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("scenic_tours", "aesthetics");
+VALUES ("smells_bad", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("unique_bars", "activities");
+VALUES ("industrial_area", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("live_music", "activities");
+VALUES ("undeveloped_land", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES ("great_shopping", "activities");
+VALUES ("lots_of_graffiti", "aesthetics");
 
 INSERT INTO question(tag, category)
-VALUES (" dog_walking_clubs", "activities");
+VALUES ("annual_parade", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("many_young_people", "activities");
+VALUES ("bike_trails", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("too_crowded", "activities");
+VALUES ("fireworks_show", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("feels_safe", "activities");
+VALUES ("community_car_show", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("feels_dangerous", "activities");
+VALUES ("weekly_volunteering events", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("kind_of_empty", "activities");
+VALUES ("monthly_craft_fairs", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("friendly_people", "activities");
+VALUES ("guided_tours", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("too_many_hipsters", "activities");
+VALUES ("many_gyms", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("snobby_people", "activities");
+VALUES ("pedestrian_friendly", "activities");
 
 INSERT INTO question(tag, category)
-VALUES ("scenic_tours", "activities");
+VALUES ("rock_climbing", "activities");
