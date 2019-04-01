@@ -17,7 +17,7 @@ user_name VARCHAR(15) NOT NULL,
 zip_code VARCHAR(5) NOT NULL,
 person_type ENUM('resident', 'visitor'),
 answer BOOLEAN DEFAULT FALSE,
-questionId INTEGER(11),
+questionID INTEGER(11),
 createdAt DATETIME, 
 updatedAt DATETIME,
 PRIMARY KEY (id)
