@@ -41,6 +41,7 @@ module.exports = function (app) {
     db.answers.create({
       user_name: req.body.user_name,
       zip_code: req.body.zip_code,
+      person_type: req.body.person_type,
     })
       .then(function (dbAnswer) {
         res.json(dbAnswer);
