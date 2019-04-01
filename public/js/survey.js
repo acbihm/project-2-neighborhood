@@ -89,36 +89,30 @@ $(document).ready(function () {
     $("#submit-results").on("click", function (event) {
         event.preventDefault();
         var user = $('#user_name').val();
-        var zip = parseInt($('#zipcode').val());
-        if (typeof zip !== "number" || zip == null) {
-            alert('You must enter your zip');
-        }
-        var tagResults = [user, zip,];
-
+        var zip = $('#zipcode').val();
+        // var type;
         if ($('#resident').is(':checked')) {
-            tagResults.push(true);
-            tagResults.push(false);
-        };
-
-        if ($('#visitor').is(':checked')) {
-            tagResults.push(false);
-            tagResults.push(true);
-        };
-
-        for (var i = 3; i < tagsArray.length; i++) {
-            if ($('#' + tagsArray[i]).is(":checked")) {
-                tagResults.push(true);
-            }
-            else if ($('#' + tagsArray[i]).not(":checked")) {
-                tagResults.push(false);
-            }
-
+            var type = "resident";
         }
-        console.log(tagResults);
-        $.post("/api/answer", tagResults)
+        else if ($('#resident').not(':checked')) {
+            var type = "visitor";
+        };
+
+        var userObj = {
+            "user_name": user,
+            "zip_code": zip,
+            "person_type": type,
+            "answer": 'null',
+            "questionID": 'null'
+            };
+
+            // ===================================================
+
+            
+
+        $.post("/api/answer", userObj)
             .then(function (data) {
                 console.log(data);
-                
                 alert("Adding tags...");
             });
 
