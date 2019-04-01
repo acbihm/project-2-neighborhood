@@ -1,11 +1,69 @@
 .list-group-item {
   line-height: 2.5;
 }
+/*this is for the background of the web pages and the background styling*/
 
-body {
-  background: url("https://bloximages.chicago2.vip.townnews.com/tucson.com/content/tncms/assets/v3/editorial/2/33/2336b92e-6875-548e-9a57-9852674b882e/5b84259423f93.image.jpg?resize=1200%2C800");
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
   background-size: 100%;
+  min-height: 300px;
+}
+
+.bgimg-2 {
+  background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("https://66.media.tumblr.com/9c1993cb785fac838837cb60d2c87ea9/tumblr_ppasq8HERo1trrzduo1_1280.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
 }
 
 
@@ -16,6 +74,7 @@ body {
 .buttonstyle {
   font-family: "Amatic SC", cursive;
   font-size: 80px;
+  
   
 }
 .buttonstyle2 {
@@ -28,7 +87,8 @@ body {
 .font1 {
   font-family: "Amatic SC", cursive;
   text-align: center;
-  font-size: 100px;
+  font-size: 120px;
+  
 }
 
 .font2 {
@@ -86,13 +146,15 @@ body {
   
 }
 .leads {
-  font-size: 30px;
+  font-size: 33px;
   font-family: "Caveat", cursive;
   text-align: center;
+
 }
 
 .bars {
   background-color: #28a745;
+  border: transparent;
 }
 .fill {
   background-color: #cfcbd3;
