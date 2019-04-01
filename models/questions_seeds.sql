@@ -35,10 +35,7 @@ INSERT INTO question(tag, category)
 VALUES ("snobby_people", "social");
 
 INSERT INTO question(tag, category)
-VALUES ("scenic_tours", "social");
-
-INSERT INTO question(tag, category)
-VALUES ("unique_bars", "aesthetics");
+VALUES ("scenic_tours", "aesthetics");
 
 INSERT INTO question(tag, category)
 VALUES ("live_music", "aesthetics");
