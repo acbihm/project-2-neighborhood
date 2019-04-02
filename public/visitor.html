@@ -12,16 +12,17 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -33,8 +34,7 @@
     </div>
     <div class="container d-flex justify-content-center mt-5 mb-5">
         <div class="card text-center" style="width: 50rem;">
-            <img src="../../public/assets/images/Screen Shot 2019-03-28 at 10.31.15 AM.png" class="card-img-top"
-                alt="...">
+            <div id="map"></div>
             <div class="card-body">
                 <h3 class="card-text">Suggested Areas</h3>
                 <ul class="list-group list-group-horizontal-sm">
@@ -57,21 +57,21 @@
                 <h3 class="card-text">Things To Do</h3>
                 <ul class="list-group list-group-horizontal-sm d-flex justify-content-center">
                     <li class="list-group-item"> <img
-                            src="../../public/assets/images/Screen Shot 2019-03-28 at 11.13.05 AM.png" width="330px"
+                            src="/Screen Shot 2019-03-28 at 11.13.05 AM.png" width="330px"
                             height="125px">
                     </li>
                     <li class="list-group-item"> <img
-                            src="../../public/assets/images/Screen Shot 2019-03-28 at 11.12.56 AM.png" width="330px"
+                            src="/Screen Shot 2019-03-28 at 11.12.56 AM.png" width="330px"
                             height="125px">
                     </li>
                 </ul>
                 <ul class="list-group list-group-horizontal-sm d-flex justify-content-center">
                     <li class="list-group-item"> <img
-                            src="../../public/assets/images/Screen Shot 2019-03-28 at 11.12.50 AM.png" width="330"
+                            src="/Screen Shot 2019-03-28 at 11.12.50 AM.png" width="330"
                             height="125px">
                     </li>
                     <li class="list-group-item"> <img
-                            src="../../public/assets/images/Screen Shot 2019-03-28 at 11.12.35 AM.png" width="330"
+                            src="/Screen Shot 2019-03-28 at 11.12.35 AM.png" width="330"
                             height="125px">
                     </li>
                 </ul>
@@ -104,7 +104,246 @@
             </div>
         </div>
 
+        <script>
+            function initMap() {
+                // The location of each zip in test database
+                var dallas = {
+                    lat: 32.78771,
+                    lng: -96.79985
+                };
+                var zip1 = {
+                    lat: 32.89286,
+                    lng: -96.86414
+                };
+                var zip2 = {
+                    lat: 32.87973,
+                    lng: -96.74415
+                };
+                var zip3 = {
+                    lat: 32.82520,
+                    lng: -96.68199
+                };
+                var zip4 = {
+                    lat: 32.76662,
+                    lng: -96.62328
+                };
+                var zip5 = {
+                    lat: 32.70094,
+                    lng: -96.68600
+                };
+                var zip6 = {
+                    lat: 32.82645,
+                    lng: -96.74532
 
+                };
+                var zip7 = {
+                    lat: 32.68368,
+                    lng: -96.93814
+                };
+                var zip8 = {
+                    lat: 32.72664,
+                    lng: -96.99142
+
+                };
+                var zip9 = {
+                    lat: 32.77731,
+                    lng: -96.98920
+
+                };
+                var zip10 = {
+                    lat: 32.82558,
+                    lng: -96.96233
+
+                };
+                var zip11 = {
+                    lat: 32.88131,
+                    lng: -96.94485
+                };
+                var zip12 = {
+                    lat: 32.87973,
+                    lng: -96.74415
+                };
+                var zip13 = {
+                    lat: 32.86227,
+                    lng: -96.74415
+                };
+                var zip14 = {
+                    lat: 32.87973,
+                    lng: -96.87088
+                };
+                var zip15 = {
+                    lat: 32.81932,
+                    lng: -96.87747
+                };
+                var zip16 = {
+                    lat: 32.73651,
+                    lng: -96.90572
+                };
+                var zip17 = {
+                    lat: 32.71065,
+                    lng: -96.77777
+                };
+                var zip18 = {
+                    lat: 32.70094,
+                    lng: -96.68600
+                };
+                var zip19 = {
+                    lat: 32.83756,
+                    lng: -96.69716
+                };
+                var zip20 = {
+                    lat: 32.83339,
+                    lng: -96.79391
+                };
+
+                var zip21 = {
+                    lat: 32.80543,
+                    lng: -96.81423
+                };
+
+                var zip22 = {
+                    lat: 32.80194,
+                    lng: -96.78758
+                };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {
+                        zoom: 11,
+                        center: dallas
+                    });
+
+                var contentString = '<h4>Resident Polls Show: </h4>' + '<h6>Skyline</h6>' + '<h6>Unique Bars</h6>' + '<h6>Parks</h6>'
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                // The marker, positioned at (x)zipcode
+                var marker1 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: dallas,
+                    map: map
+                });
+
+                var marker2 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip1,
+                    map: map
+                });
+                var marker3 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip2,
+                    map: map
+                });
+                var marker4 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip3,
+                    map: map
+                });
+                var marker5 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip4,
+                    map: map
+                });
+                var marker6 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip5,
+                    map: map
+                });
+                var marker7 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip6,
+                    map: map
+                });
+                var marker8 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip7,
+                    map: map
+                });
+                var marker9 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip8,
+                    map: map
+                });
+                var marker10 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip9,
+                    map: map
+                });
+                var marker11 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip10,
+                    map: map
+                });
+                var marker12 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip11,
+                    map: map
+                });
+                var marker13 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip12,
+                    map: map
+                });
+                var marker14 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip13,
+                    map: map
+                });
+                var marker15 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip14,
+                    map: map
+                });
+                var marker16 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip15,
+                    map: map
+                });
+                var marker17 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip16,
+                    map: map
+                });
+                var marker18 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip17,
+                    map: map
+                });
+                var marker19 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip18,
+                    map: map
+                });
+                var marker20 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip19,
+                    map: map
+                });
+                var marker21 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip20,
+                    map: map
+                });
+                var marker22 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip21,
+                    map: map
+                });
+                var marker22 = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: zip22,
+                    map: map
+                });
+
+                marker1.addListener('click', function () {
+                    infowindow.open(map, marker1);
+                });
+            }
+        </script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNjK-4QEbG4WDz58VnROVulgwJL4Lz4jE&callback=initMap"
+            async defer></script>
 
 </body>
 
