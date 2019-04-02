@@ -45,12 +45,7 @@ $(document).ready(function () {
 
   function formatButtonText(str) {
     str = str.replace(/[_-]/g, " ");
-    var strVal = "";
-    str = str.split(" ");
-    for (var chr = 0; chr < str.length; chr++) {
-      strVal += str[chr].substring(0, 1).toUpperCase() + str[chr].substring(1, str[chr].length) + "";
-    }
-    return strVal;
+    return str;
   }
 
   function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
@@ -63,7 +58,7 @@ $(document).ready(function () {
       b.attr("data-toggle", "buttons");
       b.attr("data-name", arrayToUse[i]);
       // b.attr("data-cat", "social"),
-      b.html("<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+      b.html(`<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(b);
     }
 
@@ -76,7 +71,7 @@ $(document).ready(function () {
       c.attr("data-name", arrayToUse[i]);
       // c.attr("data-cat", "aesthetics"),
       c.html(
-        "<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+        `<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(c);
     }
 
@@ -88,7 +83,7 @@ $(document).ready(function () {
       d.attr("data-toggle", "buttons");
       d.attr("data-name", arrayToUse[i]);
       // d.attr("data-cat", "activities"),
-      d.html("<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>" + formatButtonText(arrayToUse[i]) + "</label>");
+      d.html(`<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
       $(areaToAddTo).append(d);
     }
   }
