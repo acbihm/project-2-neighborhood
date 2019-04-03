@@ -4,71 +4,348 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Area Survey</title>
+    <title>Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/styles.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Caveat" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-    <script src="js/search.js"></script>
+    </script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="js/survey.js"></script>
+
 </head>
 
-
 <body>
+    <div class="button">
+        <a class="btn btn-secondary btn-lg" a="" href="survey.html">Survey</a>
+        <a class="btn btn-success btn-lg" a="" href="news.html">News</a>
+        <a class="btn btn-success btn-lg" a="" href="home.html">Home</a>
+    </div>
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+        <div class="card text-center" style="width: 50rem;">
+            <div class="card-body d-flex justify-content-center">
+                <nav class="navbar navbar-light bg-light"></nav>
+                <a class="navbar-brand" href="./home.html">
+                    <i class="fas fa-home fa-3x"></i>
+                </a>
+                </nav>
 
-    <div class="card-img-overlay">
-        <form class="form-inline">
-            <div id="tags">
-                <h2>the below tags shouldnt work with the text box also. It's redundant</h2>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="social" autocomplete="off" checked> Social
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="aesthetics" autocomplete="off"> Aesthetics
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="activities" autocomplete="off"> Activities
-                    </label>
-                </div>
-                <div id="tags"></div>
-                <div>
-                    <label for="search">Search</label><br>
-                    <input name="search" id="search_field" placeholder="search tags here"><br><br>
-                </div>
-                <div>
-                    <select class="form-control">
-                        <option value="one"> 71001</option>
-                        <option value="two"> 72002</option>
-                        <option value="three"> 73003</option>
-                        <option value="four"> 74004</option>
-                        <option value="five"> 75005</option>
-                    </select>
-                </div>
-                <!-- <div>
-                    <label for="zipcode">Zip Code</label><br>
-                    <input name="zipcode" id="zipcode" placeholder="Zip code here"><br><br>
-                </div> -->
+                <nav class="navbar navbar-light bg-light"></nav>
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-search-location fa-3x"></i>
+                </a>
+                </nav>
 
-                <br><br>
+                <nav class="navbar navbar-light bg-light"></nav>
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-sign fa-3x"></i>
+                </a>
+                </nav>
+
+                <nav class="navbar navbar-light bg-light"></nav>
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-map-marked-alt fa-3x"></i>
+                </a>
+                </nav>
+
             </div>
-            <div>
-                <input class="button4 btn-block" id="submit-results" type="submit" value="Submit">
+            <div id="map"></div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Aesthetics</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Social</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Activities</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Tag</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Distance</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">GO!</button>
+                </div>
             </div>
-        </form>
 
+            <script>
+                function initMap() {
+                    // The location of each zip in test database
+                    var dallas = {
+                        lat: 32.78771,
+                        lng: -96.79985
+                    };
+                    var zip1 = {
+                        lat: 32.89286,
+                        lng: -96.86414
+                    };
+                    var zip2 = {
+                        lat: 32.87973,
+                        lng: -96.74415
+                    };
+                    var zip3 = {
+                        lat: 32.82520,
+                        lng: -96.68199
+                    };
+                    var zip4 = {
+                        lat: 32.76662,
+                        lng: -96.62328
+                    };
+                    var zip5 = {
+                        lat: 32.70094,
+                        lng: -96.68600
+                    };
+                    var zip6 = {
+                        lat: 32.82645,
+                        lng: -96.74532
 
+                    };
+                    var zip7 = {
+                        lat: 32.68368,
+                        lng: -96.93814
+                    };
+                    var zip8 = {
+                        lat: 32.72664,
+                        lng: -96.99142
 
+                    };
+                    var zip9 = {
+                        lat: 32.77731,
+                        lng: -96.98920
+
+                    };
+                    var zip10 = {
+                        lat: 32.82558,
+                        lng: -96.96233
+
+                    };
+                    var zip11 = {
+                        lat: 32.88131,
+                        lng: -96.94485
+                    };
+                    var zip12 = {
+                        lat: 32.87973,
+                        lng: -96.74415
+                    };
+                    var zip13 = {
+                        lat: 32.86227,
+                        lng: -96.74415
+                    };
+                    var zip14 = {
+                        lat: 32.87973,
+                        lng: -96.87088
+                    };
+                    var zip15 = {
+                        lat: 32.81932,
+                        lng: -96.87747
+                    };
+                    var zip16 = {
+                        lat: 32.73651,
+                        lng: -96.90572
+                    };
+                    var zip17 = {
+                        lat: 32.71065,
+                        lng: -96.77777
+                    };
+                    var zip18 = {
+                        lat: 32.70094,
+                        lng: -96.68600
+                    };
+                    var zip19 = {
+                        lat: 32.83756,
+                        lng: -96.69716
+                    };
+                    var zip20 = {
+                        lat: 32.83339,
+                        lng: -96.79391
+                    };
+
+                    var zip21 = {
+                        lat: 32.80543,
+                        lng: -96.81423
+                    };
+
+                    var zip22 = {
+                        lat: 32.80194,
+                        lng: -96.78758
+                    };
+                    // The map, centered at Dallas
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {
+                            zoom: 12,
+                            center: dallas
+                        });
+
+                    var contentString = '<h4>Resident Polls Show: </h4>' + '<h6>Skyline</h6>' + '<h6>Unique Bars</h6>' +
+                        '<h6>Parks</h6>'
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+
+                    // The marker, positioned at (x)zipcode
+                    var marker1 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: dallas,
+                        map: map
+                    });
+
+                    var marker2 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip1,
+                        map: map
+                    });
+                    var marker3 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip2,
+                        map: map
+                    });
+                    var marker4 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip3,
+                        map: map
+                    });
+                    var marker5 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip4,
+                        map: map
+                    });
+                    var marker6 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip5,
+                        map: map
+                    });
+                    var marker7 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip6,
+                        map: map
+                    });
+                    var marker8 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip7,
+                        map: map
+                    });
+                    var marker9 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip8,
+                        map: map
+                    });
+                    var marker10 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip9,
+                        map: map
+                    });
+                    var marker11 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip10,
+                        map: map
+                    });
+                    var marker12 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip11,
+                        map: map
+                    });
+                    var marker13 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip12,
+                        map: map
+                    });
+                    var marker14 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip13,
+                        map: map
+                    });
+                    var marker15 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip14,
+                        map: map
+                    });
+                    var marker16 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip15,
+                        map: map
+                    });
+                    var marker17 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip16,
+                        map: map
+                    });
+                    var marker18 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip17,
+                        map: map
+                    });
+                    var marker19 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip18,
+                        map: map
+                    });
+                    var marker20 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip19,
+                        map: map
+                    });
+                    var marker21 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip20,
+                        map: map
+                    });
+                    var marker22 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip21,
+                        map: map
+                    });
+                    var marker22 = new google.maps.Marker({
+                        animation: google.maps.Animation.DROP,
+                        position: zip22,
+                        map: map
+                    });
+
+                    marker1.addListener('click', function () {
+                        infowindow.open(map, marker1);
+                    });
+                }
+            </script>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNjK-4QEbG4WDz58VnROVulgwJL4Lz4jE&callback=initMap"
+                async defer></script>
 
 </body>
 
