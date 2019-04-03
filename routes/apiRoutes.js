@@ -113,6 +113,7 @@ module.exports = function (app) {
   //   // res.status(204).end();
   // });
 
+
   // app.post('/api/answer', function (req, res) {
   //   db.answers.create(req.body).then(function (dbAnswer) {
   //     res.json(dbAnswer);
@@ -128,4 +129,11 @@ module.exports = function (app) {
   //     res.json(dbExample);
   //   });
   // });
+    app.delete("/api/answer/kill", function (req, res) {
+    db.answers.destroy({ where: { user_name: "" } }).then(function(
+      dbAnswer
+    ) {
+      res.json(dbAnswer);
+    });
+  
 };
