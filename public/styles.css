@@ -239,7 +239,8 @@ h3 {
 }
 
 .form {
-  background-color: white;
+  background-color: lightgrey;
+  opacity: 0.75;
   padding: 100px;
   margin-left: 200px;
   margin-right: 200px;
@@ -376,6 +377,8 @@ h3 {
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 100px;
+  background-color: lightgrey;
+  opacity: 0.75;
 }
 
 /* .footer {
