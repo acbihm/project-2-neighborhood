@@ -18,7 +18,7 @@ body, html {
 }
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  opacity: 0.65;
+  opacity: 0.85;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,9 +48,7 @@ body, html {
 
 .bg5 {
   background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-  margin: 0;
+  
 }
 
 .caption {
@@ -77,6 +75,18 @@ body, html {
   letter-spacing: 10px;
 }
 
+.card2 {
+
+  background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+  background-size: 100%;
+  opacity: 0.85;
+  
+}
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -99,6 +109,7 @@ h3 {
 .buttonstyle {
   font-family: "Amatic SC", cursive;
   font-size: 80px;
+  opacity: 0.65;
   
   
 }
@@ -106,6 +117,13 @@ h3 {
   font-family: "Amatic SC", cursive;
   font-size: 50px;
   margin-top:30px;
+  
+}
+.buttonstyle3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+
+  
   
 }
 
