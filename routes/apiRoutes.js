@@ -16,50 +16,73 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/answer", function(req, res) {
-    db.answers.findAll({}).then(function(dbAnswer) {
-      // console.log(dbAnswer);
-      res.json(dbAnswer);
-      // console.log(res.json(dbAnswer));
-    });
-  });
 
+  // ============================================================
+
+  //This shows one of the answers that are available, with no constraints. 
+  //This is more of an example.
+  // app.get("/api/answer", function (req, res) {
+  //   db.answers.findAll({}).then(function (dbAnswer) {
+  //     // console.log(dbAnswer);
+  //     res.json(dbAnswer);
+  //     // console.log(res.json(dbAnswer));
+  //   });
+  // });
+
+  //This shows all of the answers that are available.
   app.get("/api/all", function (req, res) {
-    db.answers.findAll({}).then(function(dbAnswer) {
+    db.answers.findAll({}).then(function (dbAnswer) {
       res.json(dbAnswer);
     });
   });
 
   //Below, this is how you get ONE answer by a username.
   //Might not be used in final code, but keep for reference.
-  app.get("/api/answer/:user_name", function(req, res) {
+  app.get("/api/answer/:user_name", function (req, res) {
     if (req.params.user_name) {
       // console.log(db.answers[1]);
       db.answers.findOne({
-          where: {
-            user_name: req.params.user_name
-          }
-        })
+        where: {
+          user_name: req.params.user_name
+        }
+      })
         .then(function (dbAnswer) {
           return res.json(dbAnswer);
         });
     }
   });
 
-  //Below, this is how you get all answers by a username.
-  app.get("/api/answers/:user_name", function(req, res) {
-    if (req.params.user_name) {
+  //Below, this is how you get all answers by a questionID.
+  app.get("/api/answers/:questionID", function (req, res) {
+    if (req.params.questionID) {
       // console.log(db.answers[1]);
       db.answers.findAll({
-          where: {
-            user_name: req.params.user_name
-          }
-        })
+        where: {
+          questionID: req.params.questionID,
+          answer: true
+        }
+      })
         .then(function (dbAnswer) {
           return res.json(dbAnswer);
         });
     }
   });
+
+  app.get("/api/zip/:zip_code", function (req, res) {
+    if (req.params.zip_code) {
+      // console.log(db.answers[1]);
+      db.answers.findAll({
+        where: {
+          zip_code: req.params.zip_code,
+          answer: true
+        }
+      })
+        .then(function (dbAnswer) {
+          return res.json(dbAnswer);
+        });
+    }
+  });
+
 
   app.post("/api/answer", function (req, res) {
     console.log(req.body);
