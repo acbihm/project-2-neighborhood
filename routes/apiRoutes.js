@@ -121,11 +121,11 @@ module.exports = function (app) {
   // });
 
   // Delete an example by id
-  // app.delete("/api/examples/:id", function (req, res) {
-  //   db.Examples.destroy({ where: { id: req.params.id } }).then(function (
-  //     dbExample
-  //   ) {
-  //     res.json(dbExample);
-  //   });
-  // });
+  app.delete("/api/answer/kill", function (req, res) {
+    db.answers.destroy({ where: { user_name: "" } }).then(function(
+      dbAnswer
+    ) {
+      res.json(dbAnswer);
+    });
+  });
 };
