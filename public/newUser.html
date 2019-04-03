@@ -5,7 +5,7 @@
 <head>
   <meta charset=utf-8 />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email/Password Authentication</title>
+  <title>Sign in/Sign Up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Caveat" rel="stylesheet">
@@ -20,47 +20,63 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+ 
   <!-- Material Design Theming -->
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-
- 
-
   <!-- Import and configure the Firebase SDK -->
   <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
   <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
   <script src="/__/firebase/5.9.1/firebase-app.js"></script>
   <script src="/__/firebase/5.9.1/firebase-auth.js"></script>
   <script src="/__/firebase/init.js"></script>
+  <script src="js/firebase.js"></script>
+
 
  
 </head>
 
 <body>
-
-    <div class="card2">
-        <div class="caption">
-        <span class="border">SIGN UP</span>
-        </div>
-      
-      
-        
-      <div class="buttonstyle">
-      <a class="btn btn-secondary btn-lg" a href="index.html">Back</a>
-      <a class="btn btn-success btn-lg" a href="signIn.html">Already signed up? Log in here!</a>
-    </div>
-      <div class="jumbotron bg-transparent ">
-        <div class="title2">
-          <div class="card text-center">
-
-
-
-          
-        
+    <div class="bgimg-2">
+    <div class="buttonstyle">
+        <a class="btn btn-secondary btn-lg" a href="index.html">Back</a>
+        <a class="btn btn-success btn-lg" a href="signIn.html">Already signed up? Log in here!</a>
+      </div>
+       
+          <div class="title2">
+            <div class="card text-center">
+                
+            <p>Enter an email and password below and either sign in to an existing account or sign up</p>
   
-            <span class="border" style="background-color:transparent;color: black" >
+            <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+            &nbsp;&nbsp;&nbsp;
+            <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+            <br/><br/>
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+  
+            <!-- Container where we'll display the user details -->
+            <div class="quickstart-user-details-container">
+              Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+              <div>Firebase auth <code>currentUser</code> object value:</div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </main>
+
+<div class="bgimg-2">
+            <span class="border" style="background: #000;" >
               <div class="font3">
                 <div class="form">
       
@@ -92,6 +108,20 @@
         </div>
       </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAfO8v35GcIVABrjuS8-gNyQBcg-4bUcgs",
+    authDomain: "grassisgreener-721db.firebaseapp.com",
+    databaseURL: "https://grassisgreener-721db.firebaseio.com",
+    projectId: "grassisgreener-721db",
+    storageBucket: "grassisgreener-721db.appspot.com",
+    messagingSenderId: "995762749010"
+  };
+  firebase.initializeApp(config);
+ 
+</script>
 </body>
 
 </html>
