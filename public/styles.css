@@ -12,6 +12,20 @@ body, html {
 /* .simple {
   background-color: #000;
 } */
+
+h2 {
+  color: white;
+}
+
+.btn-secondary {
+  margin-top: 5px;
+}
+
+body {
+  background-image: url(./assets/images/grasscopy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .mapview {
   background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
   opacity: 0.85;

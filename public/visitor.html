@@ -23,82 +23,56 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="js/survey.js"></script>
-    
+
 </head>
 
-
 <body>
-
-      
-           
-                <div class="bgimg-1 ">
-                       
-                            <div class="buttonstyle">
-                                <a class="btn btn-secondary btn-lg" a="" href="index.html">Info</a>
-                                <a class="btn btn-secondary btn-lg" a="" href="visitor.html">Neighborhood</a>
-                                <a class="btn btn-secondary btn-lg" a="" href="search.html">Search</a>
-                                <a class="btn btn-secondary btn-lg" a="" href="survey.html">Survey</a>
-
-                                <div class="caption">
-                                    <span class="border">WELCOME HOME</span>
-                                </div>
-             
-  
-</div>
+    <div class="button">
+        <a class="btn btn-secondary btn-lg" a="" href="survey.html">Survey</a>
+        <a class="btn btn-success btn-lg" a="" href="news.html">News</a>
+        <a class="btn btn-success btn-lg" a="" href="home.html">Home</a>
     </div>
-        <div class="mapview">
-                
-    <!-- <div class=" container d-flex justify-content-center mt-5 mb-5 ">
-        <div class="card text-center bg-transparent style="width: 50rem;"> -->
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+        <div class="card text-center" style="width: 50rem;">
             <div class="card-body d-flex justify-content-center">
-                <nav class="navbar navbar-light bg-transparent"></nav>
+                <nav class="navbar navbar-light bg-light"></nav>
                 <a class="navbar-brand" href="./home.html">
-                <i class="fas fa-home fa-3x"></i>
+                    <i class="fas fa-home fa-3x"></i>
                 </a>
                 </nav>
 
-                <nav class="navbar navbar-light bg-transparent"></nav>
+                <nav class="navbar navbar-light bg-light"></nav>
                 <a class="navbar-brand" href="#">
                     <i class="fas fa-search-location fa-3x"></i>
                 </a>
                 </nav>
 
-                <nav class="navbar navbar-light bg-transparent"></nav>
+                <nav class="navbar navbar-light bg-light"></nav>
                 <a class="navbar-brand" href="#">
                     <i class="fas fa-sign fa-3x"></i>
                 </a>
                 </nav>
 
-                <nav class="navbar navbar-light bg-transparent"></nav>
-                <a class="navbar-brand" href="#">
-                    <i class="fas fa-map-marked-alt fa-3x"></i>
-                </a>
-                </nav>
-
             </div>
             <div id="map"></div>
-            <div class="container mt-5 ">
+            <div class="container mt-5">
+                <div class="row">
                     <div class="col">
-                            <div class="col">
-                                <div class="row justify-content-center">
-                                    <u>
-                                        <h3>Residents</h3>
-                                    </u>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <button type="button" class="button2">Lakes</button>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <button type="button" class="button2">Unique Bars</button>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <button type="button" class="button2">Wildlife</button>
-                                </div>
-                         
-    
+                        <div class="row justify-content-center">
+                            <u>
+                                <h3>Residents</h3>
+                            </u>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-info">Lakes</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-info">Unique Bars</button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-info">Wildlife</button>
                         </div>
                     </div>
-               
                     <div class="col">
                         <div class="col">
                             <div class="row justify-content-center">
@@ -107,32 +81,30 @@
                                 </u>
                             </div>
                             <div class="row justify-content-center">
-                                <button type="button" class="button2">Lakes</button>
+                                <button type="button" class="btn btn-info">Lakes</button>
                             </div>
                             <div class="row justify-content-center">
-                                <button type="button" class="button2">Unique Bars</button>
+                                <button type="button" class="btn btn-info">Unique Bars</button>
                             </div>
                             <div class="row justify-content-center">
-                                <button type="button" class="button2">Wildlife</button>
+                                <button type="button" class="btn btn-info">Wildlife</button>
                             </div>
-                     
+                        </div>
 
                     </div>
                 </div>
             </div>
-        
             <div class="container mt-3">
                 <div class="row justify-content-center">
-                        <div class="buttonstyle4">
-                         
-                                  
-                                  <a class="btn btn-secondary btn-lg" a="" href="survey.html">Re-take Survey</a>
-                                  <a class="btn btn-secondary btn-lg" a="" href="news.html">See More</a>
+                    <div class="col-3">
+                        <a class="btn btn-secondary btn-lg" a="" href="survey.html">See More</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="btn btn-secondary btn-lg" a="" href="survey.html">Survey</a>
+                    </div>
                 </div>
             </div>
         </div>
-</div>
-</div>
 
         <script>
             function initMap() {
@@ -375,7 +347,7 @@
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNjK-4QEbG4WDz58VnROVulgwJL4Lz4jE&callback=initMap"
             async defer></script>
-        </div>
+
 </body>
 
 </html>
