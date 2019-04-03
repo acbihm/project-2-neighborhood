@@ -23,44 +23,53 @@
     <script src="js/survey.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="/styles.css">
 </head>
-
-
 <body>
-
-    <div class="card-img-overlay">
+    
+   
+            <div class="button">
+                    <a class="btn btn-secondary btn-lg" a="" href="index.html">Info</a>
+                    <a class="btn btn-secondary btn-lg" a="" href="visitor.html">Neighborhood</a>
+                    <a class="btn btn-secondary btn-lg" a="" href="search.html">Search</a>
+                    <a class="btn btn-secondary btn-lg" a="" href="survey.html">Survey</a>
+                </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <label for="user_name"></label><br>
+                    <input name="user_name" id="user_name" placeholder="User Name...">
+                </div>
+                <div>
+                    <label for="zipcode"></label><br>
+                    <input name="zipcode" id="zipcode" placeholder="Zip Code...">
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="resident" autocomplete="off" checked> Resident
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="visitor" autocomplete="off"> Visitor
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
         <div class='row'>
             <div class="col-md-2"></div>
             <div class="col-md-8 justify-content-center">
                 <div id="tags">
-                    <div>
-                        <label for="user_name">User Name</label><br>
-                        <input name="user_name" id="user_name" placeholder="user name here">
-                    </div>
-                    <div>
-                        <label for="zipcode">Zip Code</label><br>
-                        <input name="zipcode" id="zipcode" placeholder="Zip code here">
-                    </div>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary active">
-                            <input type="radio" name="options" id="resident" autocomplete="off" checked> Resident
-                        </label>
-                        <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="visitor" autocomplete="off"> Visitor
-                        </label>
-                    </div>
                 </div>
-                <div>
+                <div class="row mt-5">
                     <input class="button4 btn-block" id="submit-results" type="submit" value="Submit">
                 </div>
             </div>
             <div class="col-md-2"></div>
         </div>
-    </div>
-
-
-
-
-
+   
 </body>
 
 </html>
