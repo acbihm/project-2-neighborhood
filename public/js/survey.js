@@ -50,11 +50,11 @@ $(document).ready(function () {
 
   function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
 
-    $("#tags").append("<h2>Social</h2>");
+    $("#tags").append("<hr><br><h2>Social</h2><br>");
     for (var i = 0; i <= (11); i++) {
       var b = $("<div>");
       b.addClass(classToAdd);
-      b.addClass("btn-group-toggle");
+      b.addClass("btn-group-toggle custom-control-inline");
       b.attr("data-toggle", "buttons");
       b.attr("data-name", arrayToUse[i]);
       // b.attr("data-cat", "social"),
@@ -62,24 +62,24 @@ $(document).ready(function () {
       $(areaToAddTo).append(b);
     }
 
-    $("#tags").append("<h2>Aesthetics</h2>");
+    $("#tags").append("<hr><br><h2>Aesthetics</h2><br>");
     for (var i = 12; i <= (27); i++) {
       var c = $("<div>");
       c.addClass(classToAdd);
-      c.addClass("btn-group-toggle");
+      c.addClass("btn-group-toggle custom-control-inline");
       c.attr("data-toggle", "buttons");
       c.attr("data-name", arrayToUse[i]);
       // c.attr("data-cat", "aesthetics"),
       c.html(
-        `<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label>");
+        `<label class='btn btn-secondary'><input type='checkbox' autocomplete='off' id=${[i]}>` + formatButtonText(arrayToUse[i]) + "</label><br>");
       $(areaToAddTo).append(c);
     }
 
-    $("#tags").append("<h2>Activities</h2>");
+    $("#tags").append("<hr><br><h2>Activities</h2><br>");
     for (var i = 28; i <= (37); i++) {
       var d = $("<div>");
       d.addClass(classToAdd);
-      d.addClass("btn-group-toggle");
+      d.addClass("btn-group-toggle custom-control-inline");
       d.attr("data-toggle", "buttons");
       d.attr("data-name", arrayToUse[i]);
       // d.attr("data-cat", "activities"),
