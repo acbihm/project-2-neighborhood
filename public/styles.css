@@ -9,14 +9,19 @@ body, html {
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
 }
+/* .simple {
+  background-color: #000;
+} */
 .mapview {
   background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
-  opacity: 0.65;
-  height: 100%;
+  opacity: 0.85;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 }
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-11 {
   position: relative;
   opacity: 0.85;
   background-attachment: fixed;
@@ -28,7 +33,16 @@ body, html {
 .bgimg-1 {
   background: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
   background-size: 100%;
-  min-height: 300px;
+  min-height: 400px;
+
+
+}
+.bgimg-11 {
+  background: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
+  background-size: 100%;
+  
+  
+
 }
 
 .bgimg-2 {
@@ -48,7 +62,11 @@ body, html {
 
 .bg5 {
   background-image: url("https://66.media.tumblr.com/f13be217d77f755e3bf96f0ca48290b8/tumblr_ppass2mxFd1trrzduo1_1280.jpg");
-  
+  opacity: 0.85;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 
 .caption {
@@ -92,6 +110,7 @@ h3 {
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
   color: #111;
+  float: left;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -100,7 +119,13 @@ h3 {
     background-attachment: scroll;
   }
 }
-
+.buttonstyle4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 150px;
+  opacity: 0.85;
+  
+  
+}
 
 
 .signInBox {
@@ -168,7 +193,9 @@ h3 {
   font-size: 23px;
   font-family: "Caveat", cursive;
   color: white;
-  width: 100%;
+  width:50%;
+  margin-top:5px;
+  margin-bottom: 5px;
 }
 
 .button3 {
