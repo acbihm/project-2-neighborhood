@@ -3,15 +3,26 @@
 Find the area to live or visit that suits your lifestyle 
 
 ### Description
-An app to show and log the "feel" of an area, based on user inputs through survey questionss like "How is the wildlife in the area?"
-An app to show and log the "vibe" of an area, based on user inputs through survey questions and tags.
 
-Users will take a fun survey about where they live, and about where they visit. The app will gather the data and generate an average consensus of the area. Using this data, users can decide where to live, vacation, or hang out, based on what's important to them.
+Users will take a fun survey about where they live, and about where they visit. The app will gather the data and generate an average consensus of the area. Using this data, users can decide where to live, vacation, or hang out, based on what's important to them. The data will "soft data" --  fun, useful, and unique, and most importantly, things that are not currently searchable on Google.
+
+---
+
+### How?
+
+An app to show and log the "feel" or "vibe" of an area, based on user inputs through survey questions. The survey is a list of ever-growing tags that users are contributing to. Users can choose the tags that suit the area that they are visiting, across three categories. After submission, Grass is Greener will display the crowdsourced tags based on criteria set by the user -- such as searching zip codes by tag category, distance from the user, displaying the  zip code's most-chosen tags, ranking the zip codes by tag, etc.
+
+### Purpose
+
+The goal is to gather fun, unique, and useful data for users to decide where to visit, hang out, or move. Using crowdsourced data, Grass is Greener aims to show activities, places, events, etc. that is tailor-made to a user's searches or preferences. 
+
+When it comes to partnering with businesses or other developers, Grass is Greener aims to work with restaurants, bars, businesses to draw customers to them. Through documenting our API and creating widgets, we aim to provide our unique, fun and useful data to developers such as Yelp, AirBnB, Uber, Google, etc. 
 
 ---
 
 ### Sketch
 ![Grass is Greener Mockup](https://i.imgur.com/xBluOdI.png)
+
 ---
 
 ### APIs Used
