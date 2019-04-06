@@ -1,6 +1,9 @@
 ![Grass is Greener Logo](https://i.imgur.com/85Oqxtp.png)
 ### Grass is Greener App
-Find the area to live or visit that suits your lifestyle 
+
+Find the best neighborhood for you
+
+---
 
 ### Description
 
@@ -44,6 +47,5 @@ When it comes to partnering with businesses or other developers, Grass is Greene
 * POSTING user survey answers to respective zip codes. 
 * GETTING the survey answers in chosen zip code, and displaying the information in a ranked/sorted order.
 * Making the app mobile responsive
----
 
-### 
+---
